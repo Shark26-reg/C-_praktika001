@@ -8,7 +8,7 @@ Console.Write("Введите 1е число > ");                  // Выво�
 string inputnum_A = Console.ReadLine();                // Ввод строки с терминала (с консоли)
 int num_A = Convert.ToInt32(inputnum_A);               // Преобразование строки в число
 Console.WriteLine("Чётные числа от 1 до " + num_A);
-int i = 1;                                             // счетчик
+int i = 1;                                             
 bool not = true;
 while (i <= num_A)
     {
