@@ -32,27 +32,29 @@ int Promt(String message)
 
 int maxValueIndex(int[] array)
 {
-
-    int largest = int.MinValue;
-    int second = int.MinValue;
-    foreach (int i in array)
+    int largest = 0, second = 0;
+    for (int i = 0; i < array.Length; ++i)
     {
-        if (i > largest)
+        int arrItem = array[i];
+        if (arrItem > largest)
         {
-            second = largest;
-            largest = i;
+            second = largest;         //присваиваем значение самого большого 
+                                     
+            largest = arrItem;        //второе по величине
         }
-        else if (i > second)
-            second = i;
+        else if (arrItem > second && arrItem < largest)        //сравниваем полученные значения которые больше второго по величине и меньше самого большого
+                                                                
+            second = arrItem;
     }return second;
-}
+}    
 
-int Range = Promt("Введите длину массива ");
-int minValue = Promt("Введите минимальное значение ");
-int maxValue = Promt("Введите максимальное значение ");
+    int Range = Promt("Введите длину массива ");
+    int minValue = Promt("Введите минимальное значение ");
+    int maxValue = Promt("Введите максимальное значение ");
 
 
-int [] arr = GenerateArray(Range, minValue, maxValue);
-PrintArray(arr);
-Console.WriteLine("Второй максимум массива равен: " + maxValueIndex(arr));
+    int[] arr = GenerateArray(Range, minValue, maxValue);
+    PrintArray(arr);
+    Console.WriteLine("Второй максимум массива равен: " + maxValueIndex(arr));
+
 
