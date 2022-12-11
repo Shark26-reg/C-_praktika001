@@ -58,3 +58,22 @@ int maxValueIndex(int[] array)
     Console.WriteLine("Второй максимум массива равен: " + maxValueIndex(arr));
 
 
+
+
+// int SecondMax (int [] array)
+// {
+//     int max = array[0];
+//     int max2nd = int.MinValue;
+//     for (int i = 1; i < array.Length; i++)
+//     {
+//         if (array [i] >= max)
+//         {
+//             max = array[i];
+//         }
+//         if (array [i] < max && array[i] >= max2nd)
+//         {
+//             max2nd = array[i];
+//         }
+//     }
+//     return max2nd;
+// }
