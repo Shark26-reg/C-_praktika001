@@ -8,7 +8,7 @@ int[] numbers = ParseStringToArray(Console.ReadLine());
  
 Console.WriteLine($"Введено чисел больше нуля -> {Comparison(numbers)} ");
  
-int Comparison(int[] Numbers)
+int Comparison(int[] Numbers) //сравнение введенных чисел
 {
   int count = 0;
   for (int i = 0; i < numbers.Length; i++)
